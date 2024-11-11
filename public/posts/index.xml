@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Posts on Awesome Hugo blog</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on Awesome Hugo blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2024 12:13:53 +0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Nov 2024 17:05:11 +0700</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BlueHensCTF 2024 Writeup</title>
+      <link>//localhost:1313/posts/bluehensctf2024/</link>
+      <pubDate>Mon, 11 Nov 2024 17:05:11 +0700</pubDate>
+      
+      <guid>//localhost:1313/posts/bluehensctf2024/</guid>
+      
+      <description>Pythagorean Triple Brief code explanation vector is a list with 3 elements matrix is a list with 3 vectors dotp() is the dot product of 2 vectors mxv is matrix $\times$ vector, performs dotp for every vector in the matrix to the vector The loop perform mxv of a random matrix in the list all with tmp 3000 times and the name of the chosen matrix is written to key The key is being used to encrypt the flag using AES, which can be easily decrypted if we know the key (AES is a symmetric encryption) We get the tmp and the ciphertext TL;DR Find the key from tmp then decrypt the ciphertext</description>
+      
+    </item>
+    
   </channel>
 </rss>
