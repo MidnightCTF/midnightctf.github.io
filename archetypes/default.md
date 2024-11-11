@@ -1,5 +1,5 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-date = {{ .Date }}
+date = {{ 2024-11-11 }} ##.Date
 draft = true
 +++
