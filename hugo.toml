@@ -1,5 +1,5 @@
 title = "Awesome Hugo blog"
-baseURL = 'https://hba.sid.one/'
+baseURL = '/'
 
 # This is what goes in <html lang="">
 languageCode = 'en-us'
@@ -99,9 +99,9 @@ theme = "hugo-blog-awesome"
 [Languages.en-gb.params.author]
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog."
+  intro = "Midnight's CTF Writeups"
+  name = "Midnight"
+  description = "CTF Enthusiast"
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
@@ -117,13 +117,9 @@ theme = "hugo-blog-awesome"
   TileColor = "#2d89ef" # default windows 10 blue tile color
 
 [[params.socialIcons]]
-name = "github"
-url = "https://github.com/hugo-sid"
+name = "discord"
+url = "https://discordapp.com/users/1287691999557713943"
 
 [[params.socialIcons]]
-name = "twitter"
-url = "https://twitter.com"
-
-[[params.socialIcons]]
-name = "Rss"
-url = "/index.xml"
+name = "email"
+url = "mailto:realferron14@gmail.com"
