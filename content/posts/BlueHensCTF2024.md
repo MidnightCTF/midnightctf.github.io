@@ -29,12 +29,13 @@ Let's assume :
 - v1 = \[x1, y1, z1] and v2 = \[x2, y2, z2]
 
 Then, let's divide ktmp to 3 cases : 
-- ktmp = 'A'
+
+ktmp = 'A'
 According to the code : 
 - x2 = x1 - 2y1 + 2z1
 - y2 = 2x1 - y1 + 2z1
 - z2 = 2x1 - 2y1 + 3z1
-But what is x1, y1, and z1 ? 
+But what is x1, y1, and z1 in terms of x2, y2, z2 ? 
 With some algebra manipulation, we will get 
 - x2 + 2y2 - 2z2 = (x1 - 2y1 + 2z1) + 2(2x1 - y1 + 2z1) - 2(2x1 - 2y1 + 3z1) = x1
 - 2x2 + y2 - 2z2 = 2(x1 - 2y1 + 2z1) + (2x1 - y1 + 2z1) - 2(2x1 - 2y1 + 3z1) = -y1
@@ -43,12 +44,14 @@ To make it tidier, the 3 equations above is equal to :
 - x1 = x2 + 2y2 - 2z2
 - -y1 =  2x2 + y2 - 2z2
 - -z1 =  2x2 + 2y2 - 3z2
-- ktmp = 'B'
+  
+ktmp = 'B'
 Using the same ways as before we will get : 
 - x1 = x2 + 2y2 - 2z2
 - y1 =  2x2 + y2 - 2z2
 - -z1 =  2x2 + 2y2 - 3z2
-- ktmp = 'C'
+
+ktmp = 'C'
 Again : 
 - -x1 = x2 + 2y2 - 2z2
 - y1 =  2x2 + y2 - 2z2
