@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Awesome Hugo blog</title>
+    <title>Midnight</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on Awesome Hugo blog</description>
+    <description>Recent content on Midnight</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Nov 2024 17:06:32 +0700</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />

@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">BlueHensCTF 2024 Writeup | Awesome Hugo blog</title>
-<meta property="og:title" content="BlueHensCTF 2024 Writeup | Awesome Hugo blog" />
-<meta name="twitter:title" content="BlueHensCTF 2024 Writeup | Awesome Hugo blog" />
-<meta itemprop="name" content="BlueHensCTF 2024 Writeup | Awesome Hugo blog" />
-<meta name="application-name" content="BlueHensCTF 2024 Writeup | Awesome Hugo blog" />
+<title itemprop="name">BlueHensCTF 2024 Writeup | Midnight</title>
+<meta property="og:title" content="BlueHensCTF 2024 Writeup | Midnight" />
+<meta name="twitter:title" content="BlueHensCTF 2024 Writeup | Midnight" />
+<meta itemprop="name" content="BlueHensCTF 2024 Writeup | Midnight" />
+<meta name="application-name" content="BlueHensCTF 2024 Writeup | Midnight" />
 <meta property="og:site_name" content="Awesome hugo blog" />
 
 <meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-11-11",
         "description": "",
-        "wordCount":  831 ,
+        "wordCount":  837 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-11-11",
         "image": {
@@ -62,7 +62,7 @@
         },
         "publisher": {
         "@type": "Organization",
-        "name": "Awesome Hugo blog"
+        "name": "Midnight"
         }
     }
     </script>
@@ -72,7 +72,7 @@
 
     
     <meta property="og:url" content="//localhost:1313/posts/bluehensctf2024/">
-  <meta property="og:site_name" content="Awesome Hugo blog">
+  <meta property="og:site_name" content="Midnight">
   <meta property="og:title" content="BlueHensCTF 2024 Writeup">
   <meta property="og:description" content="Pythagorean Triple Brief code explanation vector is a list with 3 elements matrix is a list with 3 vectors dotp() is the dot product of 2 vectors mxv is matrix $\times$ vector, performs dotp for every vector in the matrix to the vector The loop perform mxv of a random matrix in the list all with tmp 3000 times and the name of the chosen matrix is written to key The key is being used to encrypt the flag using AES, which can be easily decrypted if we know the key (AES is a symmetric encryption) We get the tmp and the ciphertext TL;DR Find the key from tmp then decrypt the ciphertext">
   <meta property="og:locale" content="en_us">
@@ -237,35 +237,39 @@ stroke-linejoin="round" class="feather feather-home">
 <li>v1 = [x1, y1, z1] and v2 = [x2, y2, z2]</li>
 </ul>
 <p>Then, let&rsquo;s divide ktmp to 3 cases :</p>
+<p>ktmp = &lsquo;A&rsquo; <br>
+According to the code :</p>
 <ul>
-<li>ktmp = &lsquo;A&rsquo;
-According to the code :</li>
 <li>x2 = x1 - 2y1 + 2z1</li>
 <li>y2 = 2x1 - y1 + 2z1</li>
-<li>z2 = 2x1 - 2y1 + 3z1
-But what is x1, y1, and z1 ?
+<li>z2 = 2x1 - 2y1 + 3z1 <br>
+But what is x1, y1, and z1 in terms of x2, y2, z2 ? <br>
 With some algebra manipulation, we will get</li>
 <li>x2 + 2y2 - 2z2 = (x1 - 2y1 + 2z1) + 2(2x1 - y1 + 2z1) - 2(2x1 - 2y1 + 3z1) = x1</li>
 <li>2x2 + y2 - 2z2 = 2(x1 - 2y1 + 2z1) + (2x1 - y1 + 2z1) - 2(2x1 - 2y1 + 3z1) = -y1</li>
-<li>2x2 + 2y2 - 3z2 = 2(x1 - 2y1 + 2z1) + 2(2x1 - y1 + 2z1) - 3(2x1 - 2y1 + 3z1) = z1
+<li>2x2 + 2y2 - 3z2 = 2(x1 - 2y1 + 2z1) + 2(2x1 - y1 + 2z1) - 3(2x1 - 2y1 + 3z1) = z1 <br>
 To make it tidier, the 3 equations above is equal to :</li>
 <li>x1 = x2 + 2y2 - 2z2</li>
 <li>-y1 =  2x2 + y2 - 2z2</li>
 <li>-z1 =  2x2 + 2y2 - 3z2</li>
-<li>ktmp = &lsquo;B&rsquo;
-Using the same ways as before we will get :</li>
+</ul>
+<p>ktmp = &lsquo;B&rsquo; <br>
+Using the same ways as before we will get :</p>
+<ul>
 <li>x1 = x2 + 2y2 - 2z2</li>
 <li>y1 =  2x2 + y2 - 2z2</li>
 <li>-z1 =  2x2 + 2y2 - 3z2</li>
-<li>ktmp = &lsquo;C&rsquo;
-Again :</li>
+</ul>
+<p>ktmp = &lsquo;C&rsquo; <br>
+Again :</p>
+<ul>
 <li>-x1 = x2 + 2y2 - 2z2</li>
 <li>y1 =  2x2 + y2 - 2z2</li>
 <li>-z1 =  2x2 + 2y2 - 3z2</li>
 </ul>
-<p>There is a pattern.
-If the ktmp = &lsquo;A&rsquo;, y1 will be negative.
-else If the ktmp = &lsquo;C&rsquo;, x1 will be negative.
+<p>There is a pattern.<br>
+If the ktmp = &lsquo;A&rsquo;, y1 will be negative. <br>
+else If the ktmp = &lsquo;C&rsquo;, x1 will be negative. <br>
 else If the ktmp = &lsquo;B&rsquo;, none of them will be negative.</p>
 <p>So this is the solver script</p>
 <pre tabindex="0"><code>import hashlib
@@ -339,7 +343,7 @@ print(ct)
         d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
 </svg>
 </a>
-<a href="mailto:realferron14@gmail.com" target="_blank" rel="noopener noreferrer me"
+<a href="mailto:realferron1@proton.me" target="_blank" rel="noopener noreferrer me"
     title="Email">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
