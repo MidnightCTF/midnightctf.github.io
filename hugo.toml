@@ -97,7 +97,7 @@ weight = 1
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Midnight"
   name = "Midnight"
-  description = "CTF Enthusiast"
+  description = "A Moslem CTF Enthusiast"
 
 # Allow to override webmanifest options
 [params.webmanifest]
